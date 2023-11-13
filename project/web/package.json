@@ -1,0 +1,22 @@
+{
+  "name": "@art/web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arthur-Avila",
+  "license": "MIT",
+  "dependencies": {
+    "next-compose-plugins": "2.2.1",
+    "next-transpile-modules": "10.0.1",
+    "react-icons":"4.11.0",
+    "styled-components": "^6.1.0",
+    "@art/design-system":"*",
+    "@art/utils":"*"
+
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint",
+    "build": "next build"
+  }
+}
