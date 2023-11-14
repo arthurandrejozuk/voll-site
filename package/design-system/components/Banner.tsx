@@ -37,6 +37,9 @@ const BannerStyled = styled.div`
         width: 200px;
     }
     }
+    @media(max-width: 500px){
+        display: none;
+    }
 `
 
 export default function Banner({ children }) {

@@ -25,7 +25,10 @@ const GlobalStyles = createGlobalStyle`
     align-content: flex-start;
     flex-shrink: 0;
   }
- 
+ a{
+    text-decoration: none;
+    color: currentColor;
+ }
   * {
  
     box-sizing: border-box;
@@ -38,11 +41,7 @@ const GlobalStyles = createGlobalStyle`
       margin-bottom: 12px;
     }
    
-    @media(max-width: 700px ){
-        body{
-            width: fit-content;
-        }
-    }
+    
 
   }
 `;

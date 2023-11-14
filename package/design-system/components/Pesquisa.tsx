@@ -1,16 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 
-// button{
-//     position: relative;
-//     right: 60px;
-//     background-color: ${props => props.theme.secondaries.white};
-//     border: none;
-//     cursor: pointer;
-//     top: 2px;
-//     color: ${props => props.theme.primaries.darkBlue};
-// }
-
 const PesquisaStyled = styled.div`
     
     display: flex;
@@ -18,7 +8,7 @@ const PesquisaStyled = styled.div`
     align-items: center;
     
     padding: 12px;
-    button{
+    span{
         background-color: #d2d2d2;
         border: none;
         cursor: pointer;
@@ -48,10 +38,7 @@ const PesquisaStyled = styled.div`
         box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.25);
     }
     @media(max-width: 500px){
-        input{
-      
-        width: 200px;
-    }
+        padding: 0;
     }
 
 `
@@ -60,9 +47,9 @@ export default function Pesquisa({placeholder, children}){
     return(
         <PesquisaStyled>
             <div>
-                <button>
+                <span>
                     {children}
-                </button>
+                </span>
                 <input type="text" placeholder={placeholder} />
             </div>
         </PesquisaStyled>

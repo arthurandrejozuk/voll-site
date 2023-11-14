@@ -55,6 +55,10 @@ const Header = styled.section`
         }
     }
     @media(max-width: 500px){
+     
+        .busca{
+            display: none;
+        }
         p{
             display: none;
         }
@@ -77,7 +81,7 @@ export default function CabecalhoHome(){
                         <AiOutlineSearch size={20}/>
                     </button>
                 </div>
-                <Button>Login</Button>
+                <Button href="/login">Login</Button>
             </div>
         </Header>
     )

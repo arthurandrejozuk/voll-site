@@ -16,10 +16,15 @@ const StyledButton = styled.button`
     
 `
 
-export default function Button({children}){
+interface ButtonProps {
+    children: string
+    href?: string 
+}
+
+export default function Button({children, href}:ButtonProps){
     return(
         <StyledButton>
-            {children}
+            <a href={href}>{children}</a>
         </StyledButton>
     )
 }

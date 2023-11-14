@@ -10,6 +10,17 @@ const StyledBusca = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width: 500px){
+    display: flex;
+    width: 95%;
+    padding: 8px ;
+    flex-direction: column;
+    align-items: center;
+
+   }
+   button{
+     width: 100%;
+   }
 `
 const AreaBusca = styled.div`
     
@@ -19,23 +30,31 @@ const AreaBusca = styled.div`
     gap: 12px;
     color: #686868;
     padding-bottom: 32px;
-    
     margin-bottom: 24px;
     border-radius: 8px;
     background: var(--pb-white, #FFF);
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.15);
-    
     div{
-        display: flex;
-        gap: 20px ;
+        gap:20px
     }
-
-   @media(max-width: 500px){
-        margin-right:24px;
-        margin-left: 24px;
-        margin-top: 12px;
-        padding: 12px;
+ 
+    .recomendados{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      
+    }
+    
+    @media(max-width: 500px){
+        margin: 32px;
+        
+        h3{
+            padding-left: 32px;
+        };
    }
+ 
 `
 
 export default function Busca(){
@@ -46,8 +65,8 @@ export default function Busca(){
             <Pesquisa children={<FaLocationDot size={16}/>} placeholder={"Digite a sua localização"}/>
             <Button>Buscar</Button>
             </StyledBusca>
-            <h3>Você pode estar procurando por estas categorias:</h3>
-            <div>
+            <div className="recomendados">
+                <h3>Você pode estar procurando por estas categorias:</h3>
                 <Recomendados button={<TiDelete size={20}/>}>Neurologista</Recomendados>
                 <Recomendados button={<TiDelete size={20}/>}>Dermatologista</Recomendados>
                 <Recomendados button={<TiDelete size={20}/>}>Cardiologista</Recomendados>
