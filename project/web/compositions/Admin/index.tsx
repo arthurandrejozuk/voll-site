@@ -3,6 +3,7 @@ import Button from "@art/design-system/components/Button"
 import Title from "@art/design-system/components/Title";
 import Consultas from "../Consultas";
 import Cards from "../Cards";
+
 const AdminStyled = styled.section`
     
     display: flex;
@@ -45,7 +46,7 @@ export default function Admin(){
         <AdminStyled >
             <section>
                 <Title>Área administrativa</Title>
-                <Button>Cadastrar especialista</Button>
+                <Button href="/">Cadastrar especialista</Button>
             </section>
             <section className="section__consultas">
                 <img src="/img/consulta.png" alt="" />
@@ -53,7 +54,7 @@ export default function Admin(){
             </section>
             <section>
                 <Consultas/>
-                <Button>Ver mais</Button>
+                <Button href="/">Ver mais</Button>
             </section>
             <section className="section__consultas">
                 <img src="/img/grafico.png" alt="" />

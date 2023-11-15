@@ -1,6 +1,6 @@
-import Cabecalho from "../compositions/Cabecalho"
-import Admin from "../compositions/Admin"
-import Footer from "../compositions/Footer"
+import Cabecalho from "../compositions/Cabecalho";
+import Admin from "../compositions/Admin";
+import Footer from "../compositions/Footer";
 
 export default function administracao() {
     return (

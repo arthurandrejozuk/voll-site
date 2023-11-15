@@ -37,11 +37,11 @@ export default function Cabecalho(){
     return(
         <Header>
             <div>
-                <Logo src={'/img/logo.png'}/>
+                <a href="/"><Logo src={'/img/logo.png'}/></a>
             </div>
             <div>
                 <img className="perfil" src="/img/perfil.png" alt="imagem de perfil de cadastro" />
-                <p>Sair</p>
+                <p><a href="">Sair</a></p>
             </div>
             
         </Header>
