@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import IConsulta from "../../types/IConsultas";
 
 const StyledTables = styled.table`
 
@@ -18,14 +19,11 @@ const StyledTables = styled.table`
         text-align: start;
         color: ${props => props.theme.secondaries.gray};
         padding-left: 8px ;
+        padding-bottom: 8px;
     }
-    
-
-    
-
 `
 
-export default function Consultas() {
+export default function Consultas({ consultas }: { consultas: IConsulta[] | null }) {
     return (
         <StyledTables>
             <thead>
@@ -37,26 +35,30 @@ export default function Consultas() {
                 <th>Modalidade</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        08/01/23
-                    </td>
-                    <td>
-                       09:00
-                    </td>
-                    <td>
-                        Dra.Ana Lúcia
-                    </td>
-                    <td>
-                        Angiologista
-                    </td>
-                    <td>
-                        Luana Malheiros
-                    </td>
-                    <td>
-                        Particular
-                    </td>
-                </tr>
+                    {consultas?.map(consulta => {
+                        return (
+                            <tr>
+                                <td>
+                                    {consulta.data}
+                                </td>
+                                <td>
+                                    {consulta.horario}
+                                </td>
+                                <td>
+                                    {consulta.profissional[0].nome}
+                                </td>
+                                <td>
+                                    {consulta.profissional[0].especialidade}
+                                </td>
+                                <td>
+                                    {consulta.paciente}
+                                </td>
+                                <td>
+                                    {consulta.modalidade}
+                                </td>
+                            </tr>
+                        )
+                    })}     
             </tbody>
         </StyledTables>
 

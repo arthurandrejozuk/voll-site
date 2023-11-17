@@ -18,7 +18,7 @@ interface TitleProps {
     children: string
 }
 
-export default function Title({children, }:TitleProps){
+export default function Title({children }:TitleProps){
     return(
         <StyledTitle>
             {children}

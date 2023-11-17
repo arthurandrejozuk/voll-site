@@ -10,7 +10,8 @@
     "scripts": {
         "web": "yarn workspace @art/web",
         "design-system": "yarn workspace @art/design-system",
-        "web:dev": "yarn workspace @art/web dev"
+        "web:dev": "yarn workspace @art/web dev",
+        "web:api": "yarn workspace @art/web api"
     },
     "dependencies": {
         "react": "^18.2.0",

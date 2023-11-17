@@ -42,8 +42,7 @@ export default function Cabecalho(){
             <div>
                 <img className="perfil" src="/img/perfil.png" alt="imagem de perfil de cadastro" />
                 <p><a href="">Sair</a></p>
-            </div>
-            
+            </div>      
         </Header>
     )
 }

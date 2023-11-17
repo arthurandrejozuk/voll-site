@@ -1,0 +1,17 @@
+import { useEffect, useState } from "react";
+
+export default function useFetch<T>({ url }: { url: string }) {
+    const [dados, setDados] = useState(null);
+    const [erro, setErro] = useState("");
+
+    useEffect(() => {
+        fetch(`http://localhost:8080/${url}`)
+            .then(resposta => resposta.json())
+            .then(dados => setDados(dados))
+            .catch((erro) => {
+                setErro(erro.message); // You might want to use erro.message to get a more descriptive error message
+            });
+    }, [url]);
+
+    return { dados, erro };
+}
