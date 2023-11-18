@@ -7,6 +7,9 @@
   "dependencies": {
     "@art/design-system": "*",
     "@art/utils": "*",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.18",
     "next-compose-plugins": "2.2.1",
     "next-transpile-modules": "10.0.1",
     "react-icons": "4.11.0",

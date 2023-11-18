@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import Rating from '@mui/material/Rating';
 
 const StyledCard = styled.div`
     
@@ -12,16 +13,17 @@ const StyledCard = styled.div`
     gap: 16px;
     .card{
         display: flex;
-        width: 300px;
         h1,p{
             color: ${props => props.theme.secondaries.gray};
         }
         img{
             margin-right: 12px;
             border-radius: 100%;
-            width: 65px;
+            max-width: 100%;
+            width: 70px;
             height: 80px;
             border: 2px solid ${props => props.theme.primaries.darkBlue} ;
+            
         }
         .card__desc{
             display: flex;
@@ -46,8 +48,8 @@ export default function Card({imagem, doutores, area, avaliacao}){
                 </div>
             </div>
             <div>
-                {avaliacao}
-            </div>
+                <Rating value={avaliacao} />
+            </div>     
         </StyledCard>
     )
 }
