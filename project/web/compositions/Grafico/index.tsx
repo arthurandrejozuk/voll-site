@@ -10,7 +10,7 @@ interface Props {
 }
 interface IDados {
     nome: string,
-    
+    consultas: number,
 }
 
 const SectionStyled = styled.section`
@@ -28,11 +28,11 @@ export default function Grafico({profissionais, consultas}:Props){
                 <BarChart
                     layout="vertical"
                     data={dados}
-                    margin={{ top: 25, right: 40, left: 20, bottom: 20 }}
+                    margin={{ top: 25, right: 40, left: 40, bottom: 20 }}
                 >
                     <XAxis type="number"></XAxis>
                     <YAxis type="category" dataKey="nome"></YAxis>
-                    <Bar dataKey="consultas" fill="#19476c" barSize={30}></Bar>
+                    <Bar dataKey="consultas" fill="#9bb8d0" barSize={30}></Bar>
                 </BarChart>
             </ResponsiveContainer>
         </SectionStyled>

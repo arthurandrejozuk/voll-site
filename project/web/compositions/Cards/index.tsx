@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Card from "@art/design-system/components/Card"
+import useDadosProfissional from '../../functions/useDadosProfissionais';
 
 const StyledCards = styled.div`
     
@@ -8,17 +9,28 @@ const StyledCards = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: start;
-
+    img{
+        width: 500px;
+    }
 `
 
 export default function Cards(){
+
+    let profissionais = useDadosProfissional().dados;
+
     return(
         <StyledCards>
-            <Card area={"Angiologista"} doutora={"Dr. Ana Lúcia"}  imagem={'/img/doutora.png'}/>
 
-            <Card area={"Angiologista"} doutora={"Dr. Ana Lúcia"}  imagem={'/img/doutora.png'}/>
-
-            <Card area={"Angiologista"} doutora={"Dr. Ana Lúcia"}  imagem={'/img/doutora.png'}/>
+            {profissionais?.map((profissional) => {
+                return(
+                    <Card 
+                            area={profissional.especialidade} 
+                            doutores={profissional.nome}
+                            imagem={profissional.imagem}
+                            avaliacao={profissional.nota}
+                    />
+                )
+            })}
         </StyledCards>
     )
 }
