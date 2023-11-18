@@ -9,10 +9,9 @@ const StyledCards = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: start;
-    img{
-        width: 500px;
-    }
+    
 `
+
 
 export default function Cards(){
 
