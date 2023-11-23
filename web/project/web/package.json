@@ -1,0 +1,35 @@
+{
+  "name": "@art/web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arthur-Avila",
+  "license": "MIT",
+  "dependencies": {
+    "@art/design-system": "*",
+    "@art/utils": "*",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.18",
+    "mobx": "6.11.0",
+    "mobx-react": "^9.1.0",
+    "next-compose-plugins": "2.2.1",
+    "next-transpile-modules": "^10.0.1",
+    "react-icons": "4.11.0",
+    "recharts": "^2.9.3"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint",
+    "build": "next build",
+    "api": "json-server --watch -p 8080 db.json"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.23.3"
+  }
+}
