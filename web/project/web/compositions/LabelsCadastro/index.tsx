@@ -59,7 +59,6 @@ const LabelsStyled = styled.div`
         }
     }
 `
-
 interface PropsCustomizadas {
     cor: string
 }
@@ -84,13 +83,17 @@ export default function LabelsCadastro(){
     const [numero, setNumero] = useState('');
     const [complemento, setComplemento] = useState('');
     const [estado, setEstado] = useState('');
+    // pega os dados do usePost
     const {cadastrarDados, erro, sucesso} = usePost();
     const router = useRouter();
-    
+    // criamos uma função para o submit do formulario 
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         console.log(etapaAtiva)
+        // criamos uma const que recebe dados do Tipo IClinica
+        // as variaveis recebem variaveis do useState acima.
         const clinica:IClinica = {
             nome:nome,
             email:email,
@@ -103,15 +106,20 @@ export default function LabelsCadastro(){
                 estado:estado
             }
         }
+        // se no submit etapa for diferente de 0 ele tenta cadastrar
+        // caso ainda esteja ele adiciona 1 na etapaAtiva
         if(etapaAtiva !== 0){
             try{
+                // os dados são os acima que nós criamos.
                 cadastrarDados({url: "clinica", dados: clinica});
+                //dai nos leva para area de login
                 router.push("/login");
             } catch(erro){
                 erro && alert("Erro ao cadastrar os dados");
             }
         }
         setEtapaAtiva(etapaAtiva + 1);
+        
     }
         console.log(etapaAtiva);
     return(

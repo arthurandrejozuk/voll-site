@@ -5,9 +5,8 @@ import usePost from "../../functions/usePost";
 import autenticaStore from "../../stores/autentica.store";
 import IProfissional from "../../types/IProfissional";
 
-
-
 export default function ModalEspecialista({ open, handleChange }){
+    
     const [planosSelecionados, setPlanosSelecionados] = useState<string[]>([]);
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
@@ -27,11 +26,16 @@ export default function ModalEspecialista({ open, handleChange }){
     const {cadastrarDados} = usePost();
     const {usuario} = autenticaStore;
 
+    // criação do handleSwitch 
     const handleSwitch = (event: React.ChangeEvent<HTMLInputElement>) => {
+        // observa o checkbox do botao
         const checkboxValue = event.target.value;
+        //se checkbox existe 
         if (event.target.checked) {
+            // adiciona os planos selecionados
             setPlanosSelecionados([...planosSelecionados, checkboxValue]);
         } else {
+            //caso não 
             setPlanosSelecionados(planosSelecionados.filter(plano => plano !== checkboxValue));
         }
     };

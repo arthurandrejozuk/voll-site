@@ -67,6 +67,7 @@ export default function LabelsLogin(){
 
     const [email, setEmail] = useState<string>("");
     const [senha, setSenha] = useState<string>("");
+    // aqui, a diferença é que pegaremos a resposta, pois nos retorna um ID necessario para logar
     const {cadastrarDados, erro , sucesso, resposta} = usePost();
     const router = useRouter();
 
@@ -78,8 +79,11 @@ export default function LabelsLogin(){
             senha: senha
         }
         try{
+            // mudamos a URL para area de login e autorização da API.
             cadastrarDados({url: "auth/login", dados: usuario});
+            // se resposta e email existem, eles são autenticados. 
             autenticaStore.login({email: email, token: resposta});
+            // se resposta existe, retorna para area de administração
             resposta && router.push("/administracao");
         } catch(erro){
             erro && alert("Não foi possível fazer login");
