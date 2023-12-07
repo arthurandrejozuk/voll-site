@@ -6,8 +6,6 @@ import Cards from "../Cards";
 import Grafico from "../Grafico";
 import IProfissional from "../../types/IProfissional";
 import IConsulta from "../../types/IConsultas";
-import useDadosConsulta from "../../functions/useDadosConsulta";
-import useDadosProfissional from "../../functions/useDadosProfissionais";
 
 const AdminStyled = styled.section`
     
