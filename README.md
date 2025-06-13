@@ -1,3 +1,6 @@
+# VollMed
+
+Projeto Full Stack para area médica. Apenas de cunho educativo
 
 ## Front-end
 
